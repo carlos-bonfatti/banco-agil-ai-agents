@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "banco-agil"
+version = "0.1.0"
+description = "Atendimento bancário com agentes e regras auditáveis"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.40,<2"]
+graph = ["langgraph>=1,<2"]
+dev = ["ruff>=0.9,<1"]
+
+[project.scripts]
+banco-agil = "banco_agil.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["banco_agil*"]
+
+[tool.setuptools.package-data]
+banco_agil = ["seeds/*.csv"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

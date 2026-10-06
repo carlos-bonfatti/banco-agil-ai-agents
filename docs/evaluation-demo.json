@@ -1,0 +1,743 @@
+{
+  "evaluated_at_utc": "2026-10-06T00:21:20.136388+00:00",
+  "mode": "demo",
+  "model": "local-keywords",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Darwin"
+  },
+  "scope": "single-turn routing policy; no bank operations, UI, or exchange network",
+  "dataset_role": "regression baseline; not independent holdout or production quality estimate",
+  "cases": 54,
+  "correct": 54,
+  "exact_match_rate": 1.0,
+  "provider_errors": 0,
+  "skipped": 0,
+  "latency_ms": {
+    "p50": 0.035,
+    "p95": 0.085,
+    "p99": 0.205
+  },
+  "external_calls": 0,
+  "max_external_calls": 40,
+  "tokens": {
+    "input": 0,
+    "output_including_thoughts": 0,
+    "calls_with_unknown_usage": 0
+  },
+  "estimated_model_cost_usd": "0",
+  "cost_estimate_complete": true,
+  "pricing": {
+    "input_usd_per_million": null,
+    "output_usd_per_million": null,
+    "reference_date": null,
+    "source": null
+  },
+  "cost_note": "User-supplied flat rates; excludes infrastructure and special billing categories. When usage is unknown, the estimate covers reported usage only; it is not an invoice.",
+  "categories": {
+    "adversarial_routing": {
+      "cases": 3,
+      "correct": 3
+    },
+    "ambiguity": {
+      "cases": 5,
+      "correct": 5
+    },
+    "closure": {
+      "cases": 5,
+      "correct": 5
+    },
+    "context": {
+      "cases": 2,
+      "correct": 2
+    },
+    "currency": {
+      "cases": 5,
+      "correct": 5
+    },
+    "identity": {
+      "cases": 1,
+      "correct": 1
+    },
+    "increase": {
+      "cases": 2,
+      "correct": 2
+    },
+    "institution": {
+      "cases": 4,
+      "correct": 4
+    },
+    "interview": {
+      "cases": 3,
+      "correct": 3
+    },
+    "legitimate_other_bank_context": {
+      "cases": 2,
+      "correct": 2
+    },
+    "legitimate_service_context": {
+      "cases": 1,
+      "correct": 1
+    },
+    "limit": {
+      "cases": 2,
+      "correct": 2
+    },
+    "negation": {
+      "cases": 4,
+      "correct": 4
+    },
+    "out_of_scope": {
+      "cases": 2,
+      "correct": 2
+    },
+    "privacy": {
+      "cases": 1,
+      "correct": 1
+    },
+    "task_control": {
+      "cases": 2,
+      "correct": 2
+    },
+    "unsupported_currency": {
+      "cases": 5,
+      "correct": 5
+    },
+    "unsupported_service": {
+      "cases": 5,
+      "correct": 5
+    }
+  },
+  "intent_confusion": {
+    "limit": {
+      "limit": 9
+    },
+    "increase": {
+      "increase": 5
+    },
+    "interview": {
+      "interview": 3
+    },
+    "exchange": {
+      "exchange": 12
+    },
+    "end": {
+      "end": 5
+    },
+    "cancel": {
+      "cancel": 2
+    },
+    "ambiguous": {
+      "ambiguous": 3
+    },
+    "unknown": {
+      "unknown": 4
+    },
+    "unsupported_service": {
+      "unsupported_service": 5
+    },
+    "identity": {
+      "identity": 2
+    },
+    "other_bank": {
+      "other_bank": 4
+    }
+  },
+  "results": [
+    {
+      "id": "limit-01",
+      "category": "limit",
+      "expected": "limit",
+      "status": "ok",
+      "predicted": "limit",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.195,
+      "external_call": false
+    },
+    {
+      "id": "limit-02",
+      "category": "limit",
+      "expected": "limit",
+      "status": "ok",
+      "predicted": "limit",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.055,
+      "external_call": false
+    },
+    {
+      "id": "limit-03",
+      "category": "negation",
+      "expected": "limit",
+      "status": "ok",
+      "predicted": "limit",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.072,
+      "external_call": false
+    },
+    {
+      "id": "limit-04",
+      "category": "negation",
+      "expected": "limit",
+      "status": "ok",
+      "predicted": "limit",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.062,
+      "external_call": false
+    },
+    {
+      "id": "limit-05",
+      "category": "privacy",
+      "expected": "limit",
+      "status": "ok",
+      "predicted": "limit",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.046,
+      "external_call": false
+    },
+    {
+      "id": "increase-01",
+      "category": "increase",
+      "expected": "increase",
+      "status": "ok",
+      "predicted": "increase",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.036,
+      "external_call": false
+    },
+    {
+      "id": "increase-02",
+      "category": "increase",
+      "expected": "increase",
+      "status": "ok",
+      "predicted": "increase",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.033,
+      "external_call": false
+    },
+    {
+      "id": "increase-03",
+      "category": "context",
+      "expected": "increase",
+      "status": "ok",
+      "predicted": "increase",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.061,
+      "external_call": false
+    },
+    {
+      "id": "increase-04",
+      "category": "context",
+      "expected": "increase",
+      "status": "ok",
+      "predicted": "increase",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.065,
+      "external_call": false
+    },
+    {
+      "id": "interview-01",
+      "category": "interview",
+      "expected": "interview",
+      "status": "ok",
+      "predicted": "interview",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.027,
+      "external_call": false
+    },
+    {
+      "id": "interview-02",
+      "category": "interview",
+      "expected": "interview",
+      "status": "ok",
+      "predicted": "interview",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.043,
+      "external_call": false
+    },
+    {
+      "id": "interview-03",
+      "category": "interview",
+      "expected": "interview",
+      "status": "ok",
+      "predicted": "interview",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.039,
+      "external_call": false
+    },
+    {
+      "id": "fx-01",
+      "category": "currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "USD",
+      "correct": true,
+      "latency_ms": 0.205,
+      "external_call": false
+    },
+    {
+      "id": "fx-02",
+      "category": "currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "EUR",
+      "correct": true,
+      "latency_ms": 0.038,
+      "external_call": false
+    },
+    {
+      "id": "fx-03",
+      "category": "currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "GBP",
+      "correct": true,
+      "latency_ms": 0.035,
+      "external_call": false
+    },
+    {
+      "id": "fx-04",
+      "category": "currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "USD",
+      "correct": true,
+      "latency_ms": 0.036,
+      "external_call": false
+    },
+    {
+      "id": "fx-05",
+      "category": "currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "EUR",
+      "correct": true,
+      "latency_ms": 0.032,
+      "external_call": false
+    },
+    {
+      "id": "fx-06",
+      "category": "unsupported_currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "UNSUPPORTED",
+      "correct": true,
+      "latency_ms": 0.043,
+      "external_call": false
+    },
+    {
+      "id": "fx-07",
+      "category": "unsupported_currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "UNSUPPORTED",
+      "correct": true,
+      "latency_ms": 0.03,
+      "external_call": false
+    },
+    {
+      "id": "fx-08",
+      "category": "unsupported_currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "UNSUPPORTED",
+      "correct": true,
+      "latency_ms": 0.03,
+      "external_call": false
+    },
+    {
+      "id": "fx-09",
+      "category": "unsupported_currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "UNSUPPORTED",
+      "correct": true,
+      "latency_ms": 0.035,
+      "external_call": false
+    },
+    {
+      "id": "fx-10",
+      "category": "unsupported_currency",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "UNSUPPORTED",
+      "correct": true,
+      "latency_ms": 0.037,
+      "external_call": false
+    },
+    {
+      "id": "fx-11",
+      "category": "ambiguity",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "MULTIPLE",
+      "correct": true,
+      "latency_ms": 0.053,
+      "external_call": false
+    },
+    {
+      "id": "fx-12",
+      "category": "ambiguity",
+      "expected": "exchange",
+      "status": "ok",
+      "predicted": "exchange",
+      "currency": "MULTIPLE",
+      "correct": true,
+      "latency_ms": 0.045,
+      "external_call": false
+    },
+    {
+      "id": "end-01",
+      "category": "closure",
+      "expected": "end",
+      "status": "ok",
+      "predicted": "end",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.002,
+      "external_call": false
+    },
+    {
+      "id": "end-02",
+      "category": "closure",
+      "expected": "end",
+      "status": "ok",
+      "predicted": "end",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.004,
+      "external_call": false
+    },
+    {
+      "id": "end-03",
+      "category": "closure",
+      "expected": "end",
+      "status": "ok",
+      "predicted": "end",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.003,
+      "external_call": false
+    },
+    {
+      "id": "end-04",
+      "category": "closure",
+      "expected": "end",
+      "status": "ok",
+      "predicted": "end",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.003,
+      "external_call": false
+    },
+    {
+      "id": "end-05",
+      "category": "closure",
+      "expected": "end",
+      "status": "ok",
+      "predicted": "end",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.004,
+      "external_call": false
+    },
+    {
+      "id": "cancel-01",
+      "category": "task_control",
+      "expected": "cancel",
+      "status": "ok",
+      "predicted": "cancel",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.004,
+      "external_call": false
+    },
+    {
+      "id": "cancel-02",
+      "category": "task_control",
+      "expected": "cancel",
+      "status": "ok",
+      "predicted": "cancel",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.004,
+      "external_call": false
+    },
+    {
+      "id": "ambiguous-01",
+      "category": "ambiguity",
+      "expected": "ambiguous",
+      "status": "ok",
+      "predicted": "ambiguous",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.048,
+      "external_call": false
+    },
+    {
+      "id": "ambiguous-02",
+      "category": "ambiguity",
+      "expected": "ambiguous",
+      "status": "ok",
+      "predicted": "ambiguous",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.073,
+      "external_call": false
+    },
+    {
+      "id": "ambiguous-03",
+      "category": "ambiguity",
+      "expected": "ambiguous",
+      "status": "ok",
+      "predicted": "ambiguous",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.05,
+      "external_call": false
+    },
+    {
+      "id": "unknown-01",
+      "category": "out_of_scope",
+      "expected": "unknown",
+      "status": "ok",
+      "predicted": "unknown",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.008,
+      "external_call": false
+    },
+    {
+      "id": "unknown-02",
+      "category": "negation",
+      "expected": "unknown",
+      "status": "ok",
+      "predicted": "unknown",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.034,
+      "external_call": false
+    },
+    {
+      "id": "attack-01",
+      "category": "adversarial_routing",
+      "expected": "increase",
+      "status": "ok",
+      "predicted": "increase",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.068,
+      "external_call": false
+    },
+    {
+      "id": "attack-02",
+      "category": "adversarial_routing",
+      "expected": "unknown",
+      "status": "ok",
+      "predicted": "unknown",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.012,
+      "external_call": false
+    },
+    {
+      "id": "scope-01",
+      "category": "out_of_scope",
+      "expected": "unknown",
+      "status": "ok",
+      "predicted": "unknown",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.01,
+      "external_call": false
+    },
+    {
+      "id": "scope-02",
+      "category": "unsupported_service",
+      "expected": "unsupported_service",
+      "status": "ok",
+      "predicted": "unsupported_service",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.018,
+      "external_call": false
+    },
+    {
+      "id": "scope-03",
+      "category": "unsupported_service",
+      "expected": "unsupported_service",
+      "status": "ok",
+      "predicted": "unsupported_service",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.024,
+      "external_call": false
+    },
+    {
+      "id": "scope-04",
+      "category": "identity",
+      "expected": "identity",
+      "status": "ok",
+      "predicted": "identity",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.012,
+      "external_call": false
+    },
+    {
+      "id": "scope-05",
+      "category": "institution",
+      "expected": "other_bank",
+      "status": "ok",
+      "predicted": "other_bank",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.026,
+      "external_call": false
+    },
+    {
+      "id": "scope-06",
+      "category": "institution",
+      "expected": "other_bank",
+      "status": "ok",
+      "predicted": "other_bank",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.024,
+      "external_call": false
+    },
+    {
+      "id": "scope-07",
+      "category": "institution",
+      "expected": "other_bank",
+      "status": "ok",
+      "predicted": "other_bank",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.025,
+      "external_call": false
+    },
+    {
+      "id": "scope-08",
+      "category": "adversarial_routing",
+      "expected": "identity",
+      "status": "ok",
+      "predicted": "identity",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.018,
+      "external_call": false
+    },
+    {
+      "id": "scope-09",
+      "category": "legitimate_other_bank_context",
+      "expected": "limit",
+      "status": "ok",
+      "predicted": "limit",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.085,
+      "external_call": false
+    },
+    {
+      "id": "scope-10",
+      "category": "legitimate_other_bank_context",
+      "expected": "limit",
+      "status": "ok",
+      "predicted": "limit",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.08,
+      "external_call": false
+    },
+    {
+      "id": "scope-11",
+      "category": "legitimate_service_context",
+      "expected": "limit",
+      "status": "ok",
+      "predicted": "limit",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.066,
+      "external_call": false
+    },
+    {
+      "id": "scope-12",
+      "category": "negation",
+      "expected": "limit",
+      "status": "ok",
+      "predicted": "limit",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.079,
+      "external_call": false
+    },
+    {
+      "id": "scope-13",
+      "category": "unsupported_service",
+      "expected": "unsupported_service",
+      "status": "ok",
+      "predicted": "unsupported_service",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.012,
+      "external_call": false
+    },
+    {
+      "id": "scope-14",
+      "category": "unsupported_service",
+      "expected": "unsupported_service",
+      "status": "ok",
+      "predicted": "unsupported_service",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.011,
+      "external_call": false
+    },
+    {
+      "id": "scope-15",
+      "category": "unsupported_service",
+      "expected": "unsupported_service",
+      "status": "ok",
+      "predicted": "unsupported_service",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.006,
+      "external_call": false
+    },
+    {
+      "id": "scope-16",
+      "category": "institution",
+      "expected": "other_bank",
+      "status": "ok",
+      "predicted": "other_bank",
+      "currency": null,
+      "correct": true,
+      "latency_ms": 0.027,
+      "external_call": false
+    }
+  ],
+  "dataset": "intents.json"
+}

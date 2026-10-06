@@ -1,0 +1,3 @@
+cpf,nome,data_nascimento,limite_credito,score
+00000000001,Cliente Demo,1990-01-01,1000.00,400
+00000000002,Cliente Dois,1985-05-15,2000.00,750
